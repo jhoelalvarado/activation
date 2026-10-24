@@ -368,7 +368,9 @@ class _DetailScreenState extends State<DetailScreen> {
                               } catch (_) {
                                 debugPrint('No se pudo abrir ${o.url}');
                               }
-                              if (!mounted) return;
+                              // El context aquí es el parámetro de build():
+                              // el lint exige guardarlo con context.mounted.
+                              if (!context.mounted) return;
                               if (!ok) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
