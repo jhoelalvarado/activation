@@ -21,7 +21,9 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
-  late Opportunity _o;
+  // Nulable + lookup defensivo: si el id no existe evitamos StateError
+  // (pantalla gris en release) y mostramos un estado de error controlado.
+  Opportunity? _o;
   Timer? _timer;
   DateTime _ahora = DateTime.now();
   final NotificationService _notif = NotificationService();
@@ -30,7 +32,10 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
     super.initState();
-    _o = appState.oportunidades.firstWhere((x) => x.id == widget.oportunidadId);
+    final matches = appState.oportunidades
+        .where((x) => x.id == widget.oportunidadId)
+        .toList();
+    if (matches.isNotEmpty) _o = matches.first;
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (mounted) setState(() => _ahora = DateTime.now());
     });
@@ -43,7 +48,7 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Map<String, int> get _falta {
-    final d = _o.deadline.difference(_ahora);
+    final d = _o!.deadline.difference(_ahora);
     if (d.isNegative) return {'d': 0, 'h': 0, 'm': 0, 's': 0};
     return {
       'd': d.inDays,
@@ -54,25 +59,42 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Future<void> _toggleAvisarme() async {
+    final o = _o;
+    if (o == null) return;
     setState(() => _activando = true);
-    final activo = !appState.tieneRecordatorio(_o.id);
+    final activo = !appState.tieneRecordatorio(o.id);
     if (activo) {
       await _notif.pedirPermiso();
-      await _notif.programarRecordatorios(_o, appState.prefs);
-      await _notif.mostrarConfirmacion(_o, appState.prefs.offsetsDias);
+      await _notif.programarRecordatorios(o, appState.prefs);
+      await _notif.mostrarConfirmacion(o, appState.prefs.offsetsDias);
     } else {
-      await _notif.cancelarRecordatorios(_o.id);
+      await _notif.cancelarRecordatorios(o.id);
     }
-    appState.setRecordatorio(_o.id, activo);
+    appState.setRecordatorio(o.id, activo);
     if (mounted) setState(() => _activando = false);
   }
 
   @override
   Widget build(BuildContext context) {
+    // Estado de error controlado si la oportunidad no existe.
+    if (_o == null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Oportunidad')),
+        body: EmptyState(
+          icon: Icons.search_off_rounded,
+          titulo: 'Convocatoria no encontrada',
+          mensaje:
+              'Puede que haya sido retirada o que el enlace haya expirado. Vuelve al feed para ver las convocatorias vigentes.',
+          ctaLabel: 'Volver al inicio',
+          onCta: () => Navigator.of(context).pop(),
+        ),
+      );
+    }
+    final o = _o!;
     final cs = Theme.of(context).colorScheme;
-    final u = _o.urgenciaAhora(_ahora);
-    final guardada = appState.estaGuardada(_o.id);
-    final conRecordatorio = appState.tieneRecordatorio(_o.id);
+    final u = o.urgenciaAhora(_ahora);
+    final guardada = appState.estaGuardada(o.id);
+    final conRecordatorio = appState.tieneRecordatorio(o.id);
     final urgente = u == Urgencia.urgente || u == Urgencia.cerrada;
 
     return Scaffold(
@@ -84,7 +106,7 @@ class _DetailScreenState extends State<DetailScreen> {
               SliverAppBar(
                 expandedHeight: 240,
                 pinned: true,
-                backgroundColor: _o.categoria.color,
+                backgroundColor: o.categoria.color,
                 leading: _btnCirculo(
                   Icons.arrow_back_rounded,
                   onTap: () => Navigator.pop(context),
@@ -94,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     guardada
                         ? Icons.favorite_rounded
                         : Icons.favorite_border_rounded,
-                    onTap: () => appState.toggleGuardada(_o.id),
+                    onTap: () => appState.toggleGuardada(o.id),
                     color: guardada ? AppColors.urgUrgente : null,
                   ),
                   const SizedBox(width: 4),
@@ -102,7 +124,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     Icons.ios_share_rounded,
                     onTap: () => SharePlus.instance.share(ShareParams(
                         text:
-                            '${_o.titulo} — ${_o.organizacion}. Cierra el ${Fechas.ddMmm(_o.deadline)}. Postula aquí: ${_o.url}')),
+                            '${o.titulo} — ${o.organizacion}. Cierra el ${Fechas.ddMmm(o.deadline)}. Postula aquí: ${o.url}')),
                   ),
                   const SizedBox(width: 12),
                 ],
@@ -116,12 +138,12 @@ class _DetailScreenState extends State<DetailScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              _o.categoria.color,
-                              _o.categoria.color.withValues(alpha: .6),
+                              o.categoria.color,
+                              o.categoria.color.withValues(alpha: .6),
                             ],
                           ),
                         ),
-                        child: Icon(_o.categoria.icon,
+                        child: Icon(o.categoria.icon,
                             size: 120, color: Colors.white.withValues(alpha: .15)),
                       ),
                       // gradiente inferior
@@ -148,7 +170,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
-                            '${_o.categoria.label.toUpperCase()} · ${_o.modalidad.toUpperCase()}',
+                            '${o.categoria.label.toUpperCase()} · ${o.modalidad.toUpperCase()}',
                             style: const TextStyle(
                               fontSize: 10.5,
                               fontWeight: FontWeight.w800,
@@ -177,14 +199,14 @@ class _DetailScreenState extends State<DetailScreen> {
                       children: [
                         Row(
                           children: [
-                            CategoriaBadge(categoria: _o.categoria),
+                            CategoriaBadge(categoria: o.categoria),
                             const SizedBox(width: 8),
-                            UrgenciaBadge(o: _o, ahora: _ahora),
+                            UrgenciaBadge(o: o, ahora: _ahora),
                           ],
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          _o.titulo,
+                          o.titulo,
                           style: TextStyle(
                             fontSize: 23,
                             height: 1.2,
@@ -200,16 +222,16 @@ class _DetailScreenState extends State<DetailScreen> {
                               width: 32,
                               height: 32,
                               decoration: BoxDecoration(
-                                color: _o.categoria.colorSuave,
+                                color: o.categoria.colorSuave,
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(_o.categoria.icon,
-                                  size: 16, color: _o.categoria.color),
+                              child: Icon(o.categoria.icon,
+                                  size: 16, color: o.categoria.color),
                             ),
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                _o.organizacion,
+                                o.organizacion,
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
@@ -217,7 +239,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 ),
                               ),
                             ),
-                            if (_o.orgVerificada)
+                            if (o.orgVerificada)
                               Icon(Icons.verified_rounded,
                                   size: 16, color: cs.primary),
                           ],
@@ -228,7 +250,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           faltan: _falta,
                           urgente: urgente,
                           cerrada: u == Urgencia.cerrada,
-                          deadline: _o.deadline,
+                          deadline: o.deadline,
                         ),
                         const SizedBox(height: 14),
                         // ── Meta fila ──
@@ -236,13 +258,13 @@ class _DetailScreenState extends State<DetailScreen> {
                           children: [
                             Expanded(
                                 child: _metaItem(cs, Icons.location_on_outlined,
-                                    _o.lugar)),
+                                    o.lugar)),
                             Expanded(
                                 child: _metaItem(
-                                    cs, Icons.payments_outlined, _o.costo)),
+                                    cs, Icons.payments_outlined, o.costo)),
                             Expanded(
                                 child:
-                                    _metaItem(cs, Icons.people_outline, _o.publico)),
+                                    _metaItem(cs, Icons.people_outline, o.publico)),
                           ],
                         ),
                         const SizedBox(height: 16),
@@ -251,7 +273,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           titulo: 'Descripción',
                           icon: Icons.description_outlined,
                           child: Text(
-                            _o.descripcion,
+                            o.descripcion,
                             style: TextStyle(
                               fontSize: 14,
                               height: 1.6,
@@ -265,7 +287,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           icon: Icons.checklist_rounded,
                           child: Column(
                             children: [
-                              for (final r in _o.requisitos)
+                              for (final r in o.requisitos)
                                 _filaCheck(cs, r),
                             ],
                           ),
@@ -276,7 +298,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           icon: Icons.emoji_events_outlined,
                           child: Column(
                             children: [
-                              for (final b in _o.beneficios)
+                              for (final b in o.beneficios)
                                 _filaPunto(cs, b),
                             ],
                           ),
@@ -287,8 +309,8 @@ class _DetailScreenState extends State<DetailScreen> {
                           icon: Icons.format_list_numbered_rounded,
                           child: Column(
                             children: [
-                              for (var i = 0; i < _o.pasos.length; i++)
-                                _filaPaso(cs, i + 1, _o.pasos[i]),
+                              for (var i = 0; i < o.pasos.length; i++)
+                                _filaPaso(cs, i + 1, o.pasos[i]),
                             ],
                           ),
                         ),
@@ -336,10 +358,23 @@ class _DetailScreenState extends State<DetailScreen> {
                       onPressed: u == Urgencia.cerrada
                           ? null
                           : () async {
-                              final url = Uri.parse(_o.url);
-                              if (await canLaunchUrl(url)) {
-                                await launchUrl(url,
+                              final url = Uri.parse(o.url);
+                              // canLaunchUrl devuelve false en Android 11+ sin
+                              // <queries>; lanzamos directo y fallback a SnackBar.
+                              var ok = false;
+                              try {
+                                ok = await launchUrl(url,
                                     mode: LaunchMode.externalApplication);
+                              } catch (_) {
+                                debugPrint('No se pudo abrir ${o.url}');
+                              }
+                              if (!mounted) return;
+                              if (!ok) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text(
+                                          'No se pudo abrir el enlace. Copia la URL desde Compartir.')),
+                                );
                               }
                             },
                       icon: const Icon(Icons.open_in_new_rounded, size: 18),

@@ -37,7 +37,7 @@ class AboutScreen extends StatelessWidget {
             ),
           ),
           const Center(
-            child: Text('v1.0.0 · Build 2026',
+            child: Text('v1.1.0 · Build 2026',
                 style: TextStyle(fontSize: 12.5, color: Colors.grey)),
           ),
           const SizedBox(height: 20),

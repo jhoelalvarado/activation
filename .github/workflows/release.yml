@@ -41,23 +41,32 @@ jobs:
 
       - name: Nombrar artefacto
         run: |
+          VERSION="${GITHUB_REF_NAME#v}"
           cp build/app/outputs/flutter-apk/app-release.apk \
-             activation-v1.0.0.apk
-          ls -lh activation-v1.0.0.apk
+             "activation-v${VERSION}.apk"
+          ls -lh "activation-v${VERSION}.apk"
 
       - name: Crear Release con el APK
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: activation-v1.0.0.apk
+          files: "activation-v*.apk"
           body: |
-            ## Activation v1.0.0 — Primera release pública ⚡
+            ## Activation v1.1.0 — Correcciones de estabilidad ⚡
 
             App móvil para descubrir a tiempo becas, hackathons, gaming,
             empleo y ciencia en Perú — con alertas antes de cada deadline.
 
+            ### Novedades de esta versión
+            - CORREGIDO: el botón final del onboarding no avanzaba a la app
+            - CORREGIDO: la app volvía a mostrar el onboarding en cada reinicio
+            - CORREGIDO: apertura de enlaces externos ("Postular en sitio oficial")
+              en Android 11+
+            - Recordatorios programados ahora en hora de Perú (America/Lima)
+            - Pantalla de detalle más robusta ante convocatorias retiradas
+
             ### Instalación
-            1. Descarga `activation-v1.0.0.apk` (abajo).
+            1. Descarga `activation-v1.1.0.apk` (abajo).
             2. Habilita "Instalar apps de fuentes desconocidas" en tu Android.
             3. Instala y activa las notificaciones al finalizar el onboarding.
 
@@ -65,17 +74,9 @@ jobs:
             - Android 7.0 (API 24) o superior
             - arm64-v8a
 
-            ### Qué incluye
-            - 10 pantallas completas (Splash, Onboarding, Inicio, Explorar,
-              Detalle con countdown en vivo, Agenda con calendario, Alertas,
-              Perfil, Ajustes de notificaciones, Guardadas)
-            - Recordatorios locales programados (7 · 3 · 1 día(s) antes)
-            - Horario de silencio con excepción de urgencia
-            - Datos iniciales de convocatorias en Perú
-
       - name: Subir artefacto (runs sin tag)
         if: "!startsWith(github.ref, 'refs/tags/')"
         uses: actions/upload-artifact@v4
         with:
           name: activation-apk
-          path: activation-v1.0.0.apk
+          path: "activation-v*.apk"

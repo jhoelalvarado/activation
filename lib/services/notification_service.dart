@@ -15,6 +15,9 @@ class NotificationService {
   Future<void> init() async {
     if (_inicializado) return;
     tzdata.initializeTimeZones();
+    // Los deadlines se definieron en hora local del usuario (Perú). Sin esto,
+    // tz.local queda en UTC y los recordatorios sonarían 5 h tarde.
+    tz.setLocalLocation(tz.getLocation('America/Lima'));
 
     const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
     const initSettings = InitializationSettings(android: androidInit);

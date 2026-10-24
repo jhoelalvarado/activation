@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Necesario para plugins de red actuales y futuros (backend de ingesta). -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="activation"
         android:name="${applicationName}"
@@ -40,6 +42,17 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- Requerido en Android 11+ para abrir enlaces externos (url_launcher):
+             sin esta declaración canLaunchUrl/launchUrl no resuelven navegadores. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+        <!-- Necesario para share_plus (compartir texto). -->
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="*/*"/>
         </intent>
     </queries>
 </manifest>

@@ -223,7 +223,7 @@ class ProfileScreen extends StatelessWidget {
               context,
               icon: Icons.info_outline_rounded,
               label: 'Acerca de Activation',
-              sub: 'v1.0.0 · Build 2026',
+              sub: 'v1.1.0 · Build 2026',
               onTap: () => Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const AboutScreen())),
             ),

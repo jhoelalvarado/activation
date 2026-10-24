@@ -70,6 +70,9 @@ class AppState extends ChangeNotifier {
     await sp.setString('prefs', jsonEncode(_prefsToJson(prefs)));
     await sp.setString(
         'notificaciones', jsonEncode(_notificaciones.map(_notifToJson).toList()));
+    // Clave leída por main() al arrancar: sin esto el onboarding se repite
+    // en cada reinicio de la app.
+    await sp.setBool('onboarding_visto', prefs.onboardingHecho);
   }
 
   // ── Guardados ───────────────────────────────────────────────────────
@@ -124,10 +127,18 @@ class AppState extends ChangeNotifier {
   }
 
   void terminarOnboarding(Set<Categoria> intereses) {
-    prefs = prefs.copyWith(onboardingHecho: true, interests: intereses);
+    // IMPORTANTE: crear un mapa NUEVO. El mapa por defecto de UserPrefs es
+    // `const` (inmutable) y mutarlo directo lanza UnsupportedError en release,
+    // lo que bloqueaba el avance del onboarding de forma silenciosa.
+    final cats = Map<Categoria, bool>.from(prefs.categoriasActivas);
     for (final c in Categoria.values) {
-      prefs.categoriasActivas[c] = intereses.contains(c);
+      cats[c] = intereses.contains(c);
     }
+    prefs = prefs.copyWith(
+      onboardingHecho: true,
+      interests: intereses,
+      categoriasActivas: cats,
+    );
     _persist();
     notifyListeners();
   }

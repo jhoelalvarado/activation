@@ -1,7 +1,7 @@
 name: activation
 description: "Activation — Nunca más te pierdas una oportunidad. Descubre a tiempo becas, hackathons, gaming, empleo y ciencia en Perú."
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+2
 
 environment:
   sdk: ^3.13.0

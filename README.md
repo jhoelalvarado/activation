@@ -67,7 +67,7 @@ flutter build apk --release    # APK release
 
 APK listo para instalar en Android 7.0+:
 
-**→ [Descargar activation-v1.0.0.apk (Releases)](https://github.com/jhoelalvarado/activation/releases/tag/v1.0.0)**
+**→ [Descargar activation (última versión, Releases)](https://github.com/jhoelalvarado/activation/releases/latest)**
 
 1. Descarga el APK
 2. Habilita "Instalar apps de fuentes desconocidas"
