@@ -1,0 +1,81 @@
+name: Release APK
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Compilar APK release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: JDK 21 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Flutter 3.47.8
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.8
+          channel: stable
+          cache: true
+
+      - name: Resolver dependencias
+        run: flutter pub get
+
+      - name: Análisis estático (debe pasar sin problemas)
+        run: flutter analyze
+
+      - name: Compilar APK release
+        run: flutter build apk --release
+
+      - name: Nombrar artefacto
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk \
+             activation-v1.0.0.apk
+          ls -lh activation-v1.0.0.apk
+
+      - name: Crear Release con el APK
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: activation-v1.0.0.apk
+          body: |
+            ## Activation v1.0.0 — Primera release pública ⚡
+
+            App móvil para descubrir a tiempo becas, hackathons, gaming,
+            empleo y ciencia en Perú — con alertas antes de cada deadline.
+
+            ### Instalación
+            1. Descarga `activation-v1.0.0.apk` (abajo).
+            2. Habilita "Instalar apps de fuentes desconocidas" en tu Android.
+            3. Instala y activa las notificaciones al finalizar el onboarding.
+
+            ### Requisitos
+            - Android 7.0 (API 24) o superior
+            - arm64-v8a
+
+            ### Qué incluye
+            - 10 pantallas completas (Splash, Onboarding, Inicio, Explorar,
+              Detalle con countdown en vivo, Agenda con calendario, Alertas,
+              Perfil, Ajustes de notificaciones, Guardadas)
+            - Recordatorios locales programados (7 · 3 · 1 día(s) antes)
+            - Horario de silencio con excepción de urgencia
+            - Datos iniciales de convocatorias en Perú
+
+      - name: Subir artefacto (runs sin tag)
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: actions/upload-artifact@v4
+        with:
+          name: activation-apk
+          path: activation-v1.0.0.apk
