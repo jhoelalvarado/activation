@@ -1,0 +1,16 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+.vscode/
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+*.jks
+# iOS (no objetivo del MVP)
+ios/Pods/

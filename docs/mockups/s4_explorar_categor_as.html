@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'tertiary-fixed-dim': '#4edea3', 'outline': '#777587', 'on-surface': '#131b2e', 'on-primary-fixed': '#0f0069', 'inverse-on-surface': '#eef0ff', 'primary': '#3525cd', 'tertiary-container': '#006e4b', 'surface-variant': '#dae2fd', 'on-primary': '#ffffff', 'on-surface-variant': '#464555', 'outline-variant': '#c7c4d8', 'on-secondary-fixed-variant': '#2f2ebe', 'secondary-fixed': '#e1e0ff', 'on-tertiary-fixed': '#002113', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#c0c1ff', 'surface-container-low': '#f2f3ff', 'surface': '#faf8ff', 'on-secondary-fixed': '#07006c', 'surface-container': '#eaedff', 'on-primary-fixed-variant': '#3323cc', 'inverse-surface': '#283044', 'on-secondary-container': '#fffbff', 'on-primary-container': '#dad7ff', 'inverse-primary': '#c3c0ff', 'surface-tint': '#4d44e3', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'primary-fixed': '#e2dfff', 'on-tertiary-fixed-variant': '#005236', 'surface-bright': '#faf8ff', 'secondary-container': '#6063ee', 'on-background': '#131b2e', 'surface-container-lowest': '#ffffff', 'secondary': '#4648d4', 'tertiary': '#005338', 'on-tertiary-container': '#67f4b7', 'primary-container': '#4f46e5', 'primary-fixed-dim': '#c3c0ff', 'error': '#ba1a1a', 'tertiary-fixed': '#6ffbbe', 'surface-container-high': '#e2e7ff', 'surface-container-highest': '#dae2fd', 'on-error': '#ffffff', 'on-error-container': '#93000a', 'error-container': '#ffdad6', 'background': '#faf8ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '1rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter-mobile': '0.75rem', 'space-sm': '0.5rem', 'space-md': '1rem' }, fontFamily: { 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-lg': ['Inter'], 'headline-lg': ['Inter'], 'title-md': ['Inter'], 'display-lg': ['Inter'], 'label-md': ['Inter'], 'headline-lg-mobile': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'body-md': ['Inter'], 'headline-md': ['Inter'], 'tabular-countdown': ['Inter'] }, fontSize: { 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.015em', fontWeight: '600' }], 'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.025em', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: '700' }], 'tabular-countdown': ['13px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="pt-safe w-full"><div class="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs"><span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-rounded text-[14px]">signal_cellular_alt</span><span class="material-symbols-rounded text-[14px]">wifi</span><span class="material-symbols-rounded text-[15px]">battery_full</span></div></div><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Activation Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W8jCTThz6zJitN4LYR8mAauvZkXoKTAzdoUa0al07T7kTaYxHa7Hpqov49x1YzzGo8sA-5jSXNtzvhZWAfWMbZ5YpIEJFZ94E5zEBzVSQMXWdRPuwcU0R6FtU5HbE9DSIIoXp7JxfWxzzUz7DcL2mko4lqS_COY2ap4Or121lxC0UfU6vPURuifz8HoSBjOjkSfvOTH4xLiyQ1SEtASdYMKNC6CUI44lGJmDc-OYo"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight">Activation</span><span class="font-label-sm text-label-sm text-outline capitalize">Explorar</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-rounded text-[22px]">search</span></button><button aria-label="Perfil" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPgM-Vwtq196FHY7mg7cKjZ98hNkHLENDuBaGwuY7vCBcXoDDHQ3FYCBJakc2xxxKr4URd88WmVmVKjpjW0TFtYwJIFeOIP8JV7uouzzrz9P2xe0KYUpYLMELrapZPhiuMko2h34UxQPiEZYz2c-0VwJhsm-HV0OthqFhnJLbLRHA0mWJ_lRhVmJm1WUvnAYDq5JW-GRcfD2omIakgvzcu6ozInleTXmDeQnhF9MQ"/></button></div></div></div></header><main class="flex-1 w-full bg-surface pt-20 pb-28"><div class="flex flex-col w-full">
+<!-- Top Greeting & Search Trigger Banner -->
+<section class="px-margin pt-space-xs pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-bold">Explorar</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Descubre convocatorias por categoría y tendencias</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm">
+<span class="material-symbols-rounded text-[20px]" style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+</div>
+</div>
+<!-- Interactive Micro Search & Filter Bar -->
+<div class="mt-space-xs w-full bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-rounded text-[20px]">filter_list</span>
+</div>
+<div class="flex-1 flex items-center gap-space-xs text-outline font-body-md text-body-md">
+<span class="material-symbols-rounded text-[18px]">search</span>
+<span class="truncate">Filtra por disciplina, bolsa o país...</span>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm rounded-lg transition-colors" type="button">
+        Filtros
+      </button>
+</div>
+</section>
+<!-- Interactive 2-Column Categories Grid -->
+<section class="px-margin pt-space-xs pb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Categorías Principales</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">6 áreas</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- 1. Becas & Ayudas (Emerald / Tertiary) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-fixed/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">school</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold">
+            24 activas
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Becas &amp; Ayudas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Fondos e investigación
+          </span>
+</div>
+</div>
+<!-- 2. Hackathons (Electric Indigo/Purple) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed/30 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">terminal</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+            18 activos
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Hackathons</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Desafíos &amp; Bounties
+          </span>
+</div>
+</div>
+<!-- 3. Gaming & Esports (Magenta / Dynamic) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary-fixed/40 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">sports_esports</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold">
+            9 activos
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Gaming &amp; Esports</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Ligas &amp; Torneos
+          </span>
+</div>
+</div>
+<!-- 4. Educación & Bootcamps (Cobalt Blue) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-variant/50 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-surface-variant text-primary flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">auto_stories</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+            31 activos
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Educación</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Bootcamps intensivos
+          </span>
+</div>
+</div>
+<!-- 5. Empleo Tech (Amber Warm) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-error-container/30 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">work</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
+            15 vacantes
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Empleo Tech</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Roles Remoto &amp; Híbrido
+          </span>
+</div>
+</div>
+<!-- 6. Ciencia & Startups (Cyan / Tech) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer flex flex-col justify-between h-32">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-fixed-dim/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-rounded text-[22px]">rocket_launch</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold">
+            12 abiertas
+          </span>
+</div>
+<div class="relative z-10">
+<span class="block font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-tight">Ciencia &amp; Startups</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+            Aceleración &amp; Seed
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Pulse Stats Strip (Neo-Kinetic Delight) -->
+<section class="px-margin py-space-xs">
+<div class="bg-surface-container rounded-xl p-space-sm flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actualización en vivo: <strong class="text-on-surface">109 oportunidades activas</strong></span>
+</div>
+<span class="material-symbols-rounded text-[18px] text-outline">tune</span>
+</div>
+</section>
+<!-- Section: Cierran pronto (Horizontal carousel with 200dp cards) -->
+<section class="pt-space-md pb-space-xs">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-rounded text-error text-[20px]">timer</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Cierran pronto</h2>
+</div>
+<button class="font-label-md text-label-md text-primary flex items-center gap-0.5 hover:underline active:opacity-75" type="button">
+        Ver todo <span class="material-symbols-rounded text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="overflow-x-auto no-scrollbar flex gap-space-sm px-margin pb-space-sm pt-space-xs">
+<!-- Card 1 (Urgent: Hackathon) -->
+<article class="flex-none w-[200px] bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group cursor-pointer active:scale-95 transition-all">
+<div class="relative h-24 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High tech neon cybernetic workspace with energetic youth coding at late hours on dual monitors during a high stakes hackathon competition in vibrant modern indigo and soft amber ambiance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9O_a7jCElPiLZEIfl4fdoGUhXKZgBRcn-EOofX1ls5Zq_Bi44SletUaLKsFYk32Yhsrml5GZrGrZeSuctfilE_A0dETVAMSNG5Q682d3ho2JouVk99Sy9Fd_2WH13VVlsLmxcclnLKC1t5FRhSePDwgI3dasByEPzjA8AHJ0H5NmBR2dnLOksuwYb1jmZ0v3o-h6h_o2UGe9iYE8YtcLAan3Xbv57I_sh0GFVXHM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Urgency Countdown Badge with Pulse -->
+<div class="absolute top-2 left-2 bg-error-container text-on-error-container px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-tabular-countdown text-tabular-countdown font-bold text-[10px] leading-tight">¡Cierra en 48h!</span>
+</div>
+<span class="absolute bottom-2 left-2 bg-primary-container text-on-primary px-1.5 py-0.5 rounded font-label-sm text-[10px] uppercase font-bold tracking-wider">
+            Hackathon
+          </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between gap-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug line-clamp-2">Solana Radar Global Sprint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">$50,000 en bounties</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-rounded text-[14px]">public</span> Global</span>
+<span class="text-error font-bold font-tabular-countdown text-tabular-countdown">1d 22h</span>
+</div>
+</div>
+</article>
+<!-- Card 2 (Urgent: Becas) -->
+<article class="flex-none w-[200px] bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group cursor-pointer active:scale-95 transition-all">
+<div class="relative h-24 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Bright modern laboratory with innovative research equipment, notebooks and warm morning sunlight streaming through university glass windows with subtle green and slate accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fURbckvoB5kmEuQGs1JG-6Hu9vgiYPBvt_RSr-Mf4kso9uqTPZb34e4XFsuys5DbAfZINloDAxCz3nt80qLkDacaqGG-j4Mr4UL8Oslw7NCPvchmX0hGc75acPSYYAF3fmXhx5SHm33WLafHgPp0k5p4dsXLRYWZbSRPxw7yMXh6WMNN68tKxH94s3HxP5a_ilKk-HlLpXSyHadbo7Nz33T1CpSOuyncTiegexE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-error-container text-on-error-container px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-tabular-countdown text-tabular-countdown font-bold text-[10px] leading-tight">¡Cierra en 48h!</span>
+</div>
+<span class="absolute bottom-2 left-2 bg-tertiary-container text-on-tertiary-container px-1.5 py-0.5 rounded font-label-sm text-[10px] uppercase font-bold tracking-wider">
+            Beca I+D
+          </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between gap-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug line-clamp-2">Beca DeepTech Santander 2025</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">Cobertura 100% matrícula</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-rounded text-[14px]">location_on</span> Madrid</span>
+<span class="text-error font-bold font-tabular-countdown text-tabular-countdown">2d 04h</span>
+</div>
+</div>
+</article>
+<!-- Card 3 (Urgent: Gaming) -->
+<article class="flex-none w-[200px] bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group cursor-pointer active:scale-95 transition-all">
+<div class="relative h-24 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dynamic esports arena with neon stage lights, gaming setups, focused professional player headset and high energy audience atmosphere in vivid magenta and indigo glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVFMw3M9gJvGAC1EC3qbCe2mUeaswawMhrTOvWClyREFfYMR1hJaEVnS_jgXJO3uXWxokd_LrgZDsCwlioL9qrNHDVG0lRWx8OzBXcjY_YaVjqq4FLsY6j8xJzmqg7BLrc_kJ02iBKmVPKmwz9v83vWQvw6tkA38Rt99pFMMw7eTnh4L687xqKjjjUQSmZgrpMqTfgewtY7LCUQeN5zq4aJ77b7n1z1gz8cN4tBaE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 bg-error-container text-on-error-container px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-tabular-countdown text-tabular-countdown font-bold text-[10px] leading-tight">¡Cierra en 48h!</span>
+</div>
+<span class="absolute bottom-2 left-2 bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded font-label-sm text-[10px] uppercase font-bold tracking-wider">
+            Esports
+          </span>
+</div>
+<div class="p-space-sm flex-1 flex flex-col justify-between gap-space-xs">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold leading-snug line-clamp-2">Valorant Rising Stars Cup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">Pool de premios €12,000</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-rounded text-[14px]">bolt</span> Online</span>
+<span class="text-error font-bold font-tabular-countdown text-tabular-countdown">1d 11h</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Section: Nuevas esta semana (Horizontal complementary carousel) -->
+<section class="pt-space-md pb-space-lg">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-rounded text-tertiary text-[20px]">auto_awesome</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Nuevas esta semana</h2>
+</div>
+<button class="font-label-md text-label-md text-primary flex items-center gap-0.5 hover:underline active:opacity-75" type="button">
+        Ver todo <span class="material-symbols-rounded text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="overflow-x-auto no-scrollbar flex gap-space-sm px-margin pb-space-sm pt-space-xs">
+<!-- Mini-Card 1 -->
+<article class="flex-none w-[220px] bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between group cursor-pointer active:scale-95 transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-none bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern startup logo mockup on geometric architectural background representing clean climate tech venture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTNTJgubNL9a7XouFqstzNTCrSxbqsHy4UfMVaMUfPqoCgre6K2k-JJNmxLTsZYZ1Ol046ENFyXhhTTmsKOfW5e1FVVjo0Xor0OJaOB9pZllZFd520T6au4oQFW25fU96CSfkdCkXL1KQzWECZ6C8hM2pwxGEvz1Qu06vJYAPYYHC--4c5hpwIs2F1qgJMvtoLR4IvJm5kaKDr_INg6S4wEjiFCW8hmrdEPq7fMu4"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">
+<span class="w-1 h-1 rounded-full bg-tertiary"></span> Nuevo
+            </span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Climate Grant 2025</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">Fondo Verde UE</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low rounded-lg px-space-sm py-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Hasta €40.000</span>
+<span class="font-label-sm text-label-sm text-outline">Quedan 28d</span>
+</div>
+</article>
+<!-- Mini-Card 2 -->
+<article class="flex-none w-[220px] bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between group cursor-pointer active:scale-95 transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-none bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Artificial intelligence data visualization holographic model with sleek developer laptop keyboard in soft violet tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADmWVT0TbHFW-JidBTDsCmKY2IAqvrZbZt1iFTK2Z6-5Z7sFRoCJgm7x64crNBo86HAtKxsdayyhmlQrzK69KGV6qz-M4JzOl03uclzrZAO2G0oVUKdqRHe2RWLGFenEKx27PX5hIxoxOYEYvSYgd65oAHdfgJNxI_peF_woY2fVw2_ChqpJEnKjUpUjL_iKvAVcZFQBgfKoOGqV4GH0GPx-tRoYy4d742Q74adlQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">
+<span class="w-1 h-1 rounded-full bg-tertiary"></span> Nuevo
+            </span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">OpenAI Agents Residency</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">6 meses aceleración</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low rounded-lg px-space-sm py-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">Remoto + SF</span>
+<span class="font-label-sm text-label-sm text-outline">Quedan 24d</span>
+</div>
+</article>
+<!-- Mini-Card 3 -->
+<article class="flex-none w-[220px] bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between group cursor-pointer active:scale-95 transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-none bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern collaborative university maker space with 3D printers and young software engineers designing tech prototypes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0R8vH7FgnfnVWo6yQCVScNayl2Q7lgor8zvxOdCrks7_JmrZWzxd0GCD95jOzI1bWajxLVPecf5I_EcAJnY3f41dPrrAmOlXM3lVTYrzwgWol_YOh6BU6Uj1iLOzqmdIqdpGWxRNJiKFaXHjbNYLBXskqiCg0oBgg2LeawAkMbvq8eRYyH4PZIcKdF6fdpcbdXF4X2YmzCLkFVeN61hSXS5PiUlFFOozuFqgXygQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">
+<span class="w-1 h-1 rounded-full bg-tertiary"></span> Nuevo
+            </span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold truncate mt-1">Becas Google Summer Code</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">Mentoría + Estipendio</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low rounded-lg px-space-sm py-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">$3,000 USD</span>
+<span class="font-label-sm text-label-sm text-outline">Quedan 31d</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Interactive Community Prompt / Delight Card -->
+<section class="px-margin pb-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary p-space-md shadow-md flex items-center justify-between">
+<div class="relative z-10 max-w-[70%]">
+<span class="inline-block px-2 py-0.5 rounded-full bg-white/20 text-white font-label-sm text-[10px] font-bold uppercase tracking-wider mb-1">Comunidad</span>
+<h4 class="font-title-md text-title-md font-bold leading-tight">¿Tienes una oportunidad para publicar?</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">Llega a más de 45.000 talentos y builders calificados.</p>
+</div>
+<button class="relative z-10 w-11 h-11 rounded-full bg-white text-primary flex items-center justify-center shadow-lg active:scale-95 transition-transform" type="button">
+<span class="material-symbols-rounded text-[22px]">add</span>
+</button>
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-white/10 pointer-events-none"></div>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none" data-active-classes="text-primary-container font-label-md"><div class="px-margin pb-space-sm"><div class="pointer-events-auto mx-auto max-w-md h-16 bg-surface-container-lowest/85 backdrop-blur-xl rounded-full shadow-[0_6px_24px_rgba(79,70,229,0.08)] flex items-center justify-around px-space-xs"><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 rounded-full text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="inicio" href="#"><span class="material-symbols-rounded text-[22px] transition-transform group-hover:-translate-y-0.5">home</span><span class="font-label-sm text-label-sm mt-0.5">Inicio</span></a><a aria-current="page" class="group flex flex-col items-center justify-center min-w-[56px] h-12 rounded-full transition-all active:scale-95 text-primary-container font-label-md" data-path="explorar" href="#"><span class="material-symbols-rounded text-[22px] transition-transform group-hover:-translate-y-0.5">explore</span><span class="font-label-sm text-label-sm mt-0.5">Explorar</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 rounded-full text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="agenda" href="#"><span class="material-symbols-rounded text-[22px] transition-transform group-hover:-translate-y-0.5">event</span><span class="font-label-sm text-label-sm mt-0.5">Agenda</span></a><a class="group relative flex flex-col items-center justify-center min-w-[56px] h-12 rounded-full text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="alertas" href="#"><div class="relative"><span class="material-symbols-rounded text-[22px] transition-transform group-hover:-translate-y-0.5">notifications</span><span class="absolute -top-1 -right-1 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] ring-2 ring-surface-container-lowest">3</span></div><span class="font-label-sm text-label-sm mt-0.5">Alertas</span></a><a class="group flex flex-col items-center justify-center min-w-[56px] h-12 rounded-full text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="perfil" href="#"><span class="material-symbols-rounded text-[22px] transition-transform group-hover:-translate-y-0.5">person</span><span class="font-label-sm text-label-sm mt-0.5">Perfil</span></a></div></div></nav></body></html>

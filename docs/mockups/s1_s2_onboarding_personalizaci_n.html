@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'tertiary-fixed-dim': '#4edea3', 'outline': '#777587', 'on-surface': '#131b2e', 'on-primary-fixed': '#0f0069', 'inverse-on-surface': '#eef0ff', 'primary': '#3525cd', 'tertiary-container': '#006e4b', 'surface-variant': '#dae2fd', 'on-primary': '#ffffff', 'on-surface-variant': '#464555', 'outline-variant': '#c7c4d8', 'on-secondary-fixed-variant': '#2f2ebe', 'secondary-fixed': '#e1e0ff', 'on-tertiary-fixed': '#002113', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#c0c1ff', 'surface-container-low': '#f2f3ff', 'surface': '#faf8ff', 'on-secondary-fixed': '#07006c', 'surface-container': '#eaedff', 'on-primary-fixed-variant': '#3323cc', 'inverse-surface': '#283044', 'on-secondary-container': '#fffbff', 'on-primary-container': '#dad7ff', 'inverse-primary': '#c3c0ff', 'surface-tint': '#4d44e3', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'primary-fixed': '#e2dfff', 'on-tertiary-fixed-variant': '#005236', 'surface-bright': '#faf8ff', 'secondary-container': '#6063ee', 'on-background': '#131b2e', 'surface-container-lowest': '#ffffff', 'secondary': '#4648d4', 'tertiary': '#005338', 'on-tertiary-container': '#67f4b7', 'primary-container': '#4f46e5', 'primary-fixed-dim': '#c3c0ff', 'error': '#ba1a1a', 'tertiary-fixed': '#6ffbbe', 'surface-container-high': '#e2e7ff', 'surface-container-highest': '#dae2fd', 'on-error': '#ffffff', 'on-error-container': '#93000a', 'error-container': '#ffdad6', 'background': '#faf8ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '1rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter-mobile': '0.75rem', 'space-sm': '0.5rem', 'space-md': '1rem' }, fontFamily: { 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-lg': ['Inter'], 'headline-lg': ['Inter'], 'title-md': ['Inter'], 'display-lg': ['Inter'], 'label-md': ['Inter'], 'headline-lg-mobile': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'body-md': ['Inter'], 'headline-md': ['Inter'], 'tabular-countdown': ['Inter'] }, fontSize: { 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.015em', fontWeight: '600' }], 'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.025em', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: '700' }], 'tabular-countdown': ['13px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="pt-safe w-full"><div class="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs"><span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-rounded text-[14px]">signal_cellular_alt</span><span class="material-symbols-rounded text-[14px]">wifi</span><span class="material-symbols-rounded text-[15px]">battery_full</span></div></div><div class="h-14 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Volver" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-rounded text-[24px]">arrow_back</span></button><img alt="Activation Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W8jCTThz6zJitN4LYR8mAauvZkXoKTAzdoUa0al07T7kTaYxHa7Hpqov49x1YzzGo8sA-5jSXNtzvhZWAfWMbZ5YpIEJFZ94E5zEBzVSQMXWdRPuwcU0R6FtU5HbE9DSIIoXp7JxfWxzzUz7DcL2mko4lqS_COY2ap4Or121lxC0UfU6vPURuifz8HoSBjOjkSfvOTH4xLiyQ1SEtASdYMKNC6CUI44lGJmDc-OYo"/><h1 class="font-title-md text-title-md text-on-surface truncate tracking-tight">S1   Splash &amp; Onboarding</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Ordenar o Filtrar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-rounded text-[20px]">tune</span></button><button aria-label="Compartir" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-rounded text-[20px]">share</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPgM-Vwtq196FHY7mg7cKjZ98hNkHLENDuBaGwuY7vCBcXoDDHQ3FYCBJakc2xxxKr4URd88WmVmVKjpjW0TFtYwJIFeOIP8JV7uouzzrz9P2xe0KYUpYLMELrapZPhiuMko2h34UxQPiEZYz2c-0VwJhsm-HV0OthqFhnJLbLRHA0mWJ_lRhVmJm1WUvnAYDq5JW-GRcfD2omIakgvzcu6ozInleTXmDeQnhF9MQ"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-20 pb-safe"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Brand Header & Aura -->
+<div class="relative flex flex-col items-center justify-center pt-space-md pb-space-sm text-center overflow-hidden">
+<!-- Kinetic Violet/Indigo Ambient Glow -->
+<div class="absolute -top-10 w-44 h-44 bg-gradient-to-tr from-primary-fixed to-secondary-fixed rounded-full blur-3xl opacity-40 pointer-events-none"></div>
+<!-- Activation Glyph -->
+<div class="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center shadow-lg shadow-primary/20 mb-space-sm">
+<div class="relative flex items-center justify-center">
+<!-- Alert Bell Base -->
+<span class="material-symbols-outlined text-[32px] text-on-primary" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<!-- Kinetic Lightning Ray overlay -->
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed absolute -top-1 -right-1 drop-shadow-md animate-pulse" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+<!-- Wordmark & Tagline -->
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Activation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-[260px]">Nunca más te pierdas una oportunidad</p>
+</div>
+<!-- Progress Flow Ribbon -->
+<div class="w-full flex flex-col items-center gap-space-xs mt-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-sm"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-sm"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container ring-4 ring-primary-fixed shadow-sm"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-highest"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wide">Paso 3 de 4: Personaliza tu radar</span>
+</div>
+<!-- Central Configuration Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col">
+<!-- Header Titles -->
+<div class="flex flex-col gap-1 mb-space-md">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">¿Qué oportunidades buscas?</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+        Te avisaremos 7, 3 y 1 día antes del cierre exacto de cada convocatoria.
+      </p>
+</div>
+<!-- Multi-Select Interactive Chip Grid -->
+<div class="flex flex-wrap gap-space-xs w-full mb-space-md" id="chip-container">
+<!-- 1: Hackathons (Selected) -->
+<button class="interest-chip selected flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">bolt</span>
+<span>Hackathons</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 2: Becas & Ayudas (Selected) -->
+<button class="interest-chip selected flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Becas &amp; Ayudas</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 3: Gaming & Esports (Selected) -->
+<button class="interest-chip selected flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[16px]">sports_esports</span>
+<span>Gaming &amp; Esports</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 4: Empleo Tech (Unselected) -->
+<button class="interest-chip flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">work</span>
+<span>Empleo Tech</span>
+<span class="check-icon hidden material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 5: Startups & Venture (Selected) -->
+<button class="interest-chip selected flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Startups &amp; Venture</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 6: Cursos & Bootcamps (Unselected) -->
+<button class="interest-chip flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+<span>Cursos &amp; Bootcamps</span>
+<span class="check-icon hidden material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 7: Arte & Diseño Digital (Unselected) -->
+<button class="interest-chip flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-selected="false" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">palette</span>
+<span>Arte &amp; Diseño Digital</span>
+<span class="check-icon hidden material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+<!-- 8: Ciencia & DeepTech (Selected) -->
+<button class="interest-chip selected flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all active:scale-95" data-selected="true" type="button">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Ciencia &amp; DeepTech</span>
+<span class="check-icon material-symbols-outlined text-[16px] text-on-primary">check</span>
+</button>
+</div>
+<!-- Timing Alert Preview Card -->
+<div class="w-full bg-surface-container-high rounded-xl p-3 flex items-start gap-space-sm mt-space-xs transition-all">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-primary text-[18px]">notifications_active</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold leading-tight" id="alert-summary">
+          Recordatorios automáticos activos para <span class="text-primary font-tabular-countdown text-tabular-countdown" id="counter-display">5</span> categorías seleccionadas
+        </p>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Te enviaremos alertas sonoras y push sin ruido extra.</span>
+</div>
+</div>
+</div>
+<!-- Interactive Live Sparkle Feedback Tray -->
+<div class="mt-space-md w-full bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sincronizando 142 convocatorias hoy</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">En tiempo real</span>
+</div>
+<!-- Bottom Action Container -->
+<div class="w-full flex flex-col gap-space-sm mt-space-lg items-center">
+<button class="w-full h-[52px] bg-gradient-to-r from-primary to-primary-container rounded-xl flex items-center justify-center gap-space-xs text-on-primary font-label-lg text-label-lg shadow-md shadow-primary/25 active:scale-[0.98] transition-transform" type="button">
+<span>Empezar a explorar convocatorias</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="py-2 px-4 text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors active:opacity-70" type="button">
+      Saltar configuración por ahora
+    </button>
+</div>
+</div>
+<script>
+  (() => {
+    const chipContainer = document.getElementById('chip-container');
+    const counterDisplay = document.getElementById('counter-display');
+    const summaryText = document.getElementById('alert-summary');
+
+    if (!chipContainer || !counterDisplay) return;
+
+    const updateCounter = () => {
+      const selectedChips = chipContainer.querySelectorAll('button[data-selected="true"]');
+      const count = selectedChips.length;
+      counterDisplay.textContent = count;
+      if (count === 0) {
+        summaryText.innerHTML = 'Selecciona al menos 1 categor&iacute;a para activar recordatorios';
+      } else {
+        summaryText.innerHTML = `Recordatorios autom&aacute;ticos activos para <span id="counter-display" class="text-primary font-tabular-countdown text-tabular-countdown">${count}</span> categor&iacute;as seleccionadas`;
+      }
+    };
+
+    chipContainer.addEventListener('click', (e) => {
+      const button = e.target.closest('.interest-chip');
+      if (!button) return;
+
+      const isSelected = button.getAttribute('data-selected') === 'true';
+      const checkIcon = button.querySelector('.check-icon');
+
+      if (isSelected) {
+        button.setAttribute('data-selected', 'false');
+        button.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        button.classList.add('bg-surface-container-low', 'text-on-surface');
+        if (checkIcon) checkIcon.classList.add('hidden');
+      } else {
+        button.setAttribute('data-selected', 'true');
+        button.classList.remove('bg-surface-container-low', 'text-on-surface');
+        button.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        if (checkIcon) checkIcon.classList.remove('hidden');
+      }
+
+      updateCounter();
+    });
+  })();
+</script></main></body></html>

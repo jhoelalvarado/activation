@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'tertiary-fixed-dim': '#4edea3', 'outline': '#777587', 'on-surface': '#131b2e', 'on-primary-fixed': '#0f0069', 'inverse-on-surface': '#eef0ff', 'primary': '#3525cd', 'tertiary-container': '#006e4b', 'surface-variant': '#dae2fd', 'on-primary': '#ffffff', 'on-surface-variant': '#464555', 'outline-variant': '#c7c4d8', 'on-secondary-fixed-variant': '#2f2ebe', 'secondary-fixed': '#e1e0ff', 'on-tertiary-fixed': '#002113', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#c0c1ff', 'surface-container-low': '#f2f3ff', 'surface': '#faf8ff', 'on-secondary-fixed': '#07006c', 'surface-container': '#eaedff', 'on-primary-fixed-variant': '#3323cc', 'inverse-surface': '#283044', 'on-secondary-container': '#fffbff', 'on-primary-container': '#dad7ff', 'inverse-primary': '#c3c0ff', 'surface-tint': '#4d44e3', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'primary-fixed': '#e2dfff', 'on-tertiary-fixed-variant': '#005236', 'surface-bright': '#faf8ff', 'secondary-container': '#6063ee', 'on-background': '#131b2e', 'surface-container-lowest': '#ffffff', 'secondary': '#4648d4', 'tertiary': '#005338', 'on-tertiary-container': '#67f4b7', 'primary-container': '#4f46e5', 'primary-fixed-dim': '#c3c0ff', 'error': '#ba1a1a', 'tertiary-fixed': '#6ffbbe', 'surface-container-high': '#e2e7ff', 'surface-container-highest': '#dae2fd', 'on-error': '#ffffff', 'on-error-container': '#93000a', 'error-container': '#ffdad6', 'background': '#faf8ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter': '1rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter-mobile': '0.75rem', 'space-sm': '0.5rem', 'space-md': '1rem' }, fontFamily: { 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-lg': ['Inter'], 'headline-lg': ['Inter'], 'title-md': ['Inter'], 'display-lg': ['Inter'], 'label-md': ['Inter'], 'headline-lg-mobile': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'body-md': ['Inter'], 'headline-md': ['Inter'], 'tabular-countdown': ['Inter'] }, fontSize: { 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.015em', fontWeight: '600' }], 'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.025em', fontWeight: '700' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: '700' }], 'tabular-countdown': ['13px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="pt-safe w-full"><div class="w-full px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs"><span class="font-label-md text-label-md text-on-surface font-bold tracking-tight">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-rounded text-[14px]">signal_cellular_alt</span><span class="material-symbols-rounded text-[14px]">wifi</span><span class="material-symbols-rounded text-[15px]">battery_full</span></div></div><div class="h-14 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Volver" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-rounded text-[24px]">arrow_back</span></button><img alt="Activation Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W8jCTThz6zJitN4LYR8mAauvZkXoKTAzdoUa0al07T7kTaYxHa7Hpqov49x1YzzGo8sA-5jSXNtzvhZWAfWMbZ5YpIEJFZ94E5zEBzVSQMXWdRPuwcU0R6FtU5HbE9DSIIoXp7JxfWxzzUz7DcL2mko4lqS_COY2ap4Or121lxC0UfU6vPURuifz8HoSBjOjkSfvOTH4xLiyQ1SEtASdYMKNC6CUI44lGJmDc-OYo"/><h1 class="font-title-md text-title-md text-on-surface truncate tracking-tight">Detalle</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Compartir" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-rounded text-[20px]">share</span></button><button aria-label="Guardar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-rounded text-[20px]">bookmark_border</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPgM-Vwtq196FHY7mg7cKjZ98hNkHLENDuBaGwuY7vCBcXoDDHQ3FYCBJakc2xxxKr4URd88WmVmVKjpjW0TFtYwJIFeOIP8JV7uouzzrz9P2xe0KYUpYLMELrapZPhiuMko2h34UxQPiEZYz2c-0VwJhsm-HV0OthqFhnJLbLRHA0mWJ_lRhVmJm1WUvnAYDq5JW-GRcfD2omIakgvzcu6ozInleTXmDeQnhF9MQ"/></div></div></div></header><main class="flex-1 w-full bg-surface pt-20 pb-safe"><div class="flex flex-col w-full pb-36">
+<!-- Hero Inmersivo Visual -->
+<div class="relative w-full h-80 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A modern collaborative technology hackathon venue bathed in ambient cobalt indigo and cyber purple neon glow. Highly focused diverse software engineers, designers and founders collaborating around laptops with high-tech generative AI visual code diagrams glowing on ambient LED screen backdrops. Cinematic angle, ultra-sharp focus, crisp editorial tech lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBc3cz6QTuFPv4ceSU5eW7gjVz8930zhEGAxeyhfwyCuFGNOIh6sc8uytOwhQrV4nedYxCWw-TmnOJ5KbJArfONfxECq7mOkXIDLAWq5kKqb9dXDOabjXgn7kHG-_FSQ5oCy5L22McvVyE6QsGRhHC1XpgZoEJTVPAvP-x_Zzwi-L1_4RCQEllTHydbD51HVH8RU8DufOPnUFkrp0LLEf1qNSrSJk4NciCLgh8vipg')">
+</div>
+<!-- Scrim Gradiente Dinámico -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div>
+<!-- Botones Flotantes Superiores en Overlay -->
+<div class="absolute top-4 inset-x-0 px-margin flex items-center justify-between z-10">
+<button aria-label="Volver atrás" class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center text-on-surface active:scale-95 transition-transform" onclick="history.back()" type="button">
+<span class="material-symbols-rounded text-[20px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-sm">
+<button aria-label="Guardar favorito" class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center text-error active:scale-90 transition-transform" id="fav-btn" onclick="toggleFavorite()" type="button">
+<span class="material-symbols-rounded text-[22px]" id="fav-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button aria-label="Compartir evento" class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center text-on-surface active:scale-95 transition-transform" onclick="handleShare()" type="button">
+<span class="material-symbols-rounded text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Micro Píldora de Estado en Hero -->
+<div class="absolute bottom-10 left-margin z-10 flex items-center gap-space-xs bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm tracking-wide">EDICIÓN GLOBAL 2026</span>
+</div>
+</div>
+<!-- Sheet Contenedor con Solapamiento Suave -->
+<div class="relative -mt-6 w-full bg-surface-container-lowest rounded-t-[24px] shadow-xl px-margin pt-6 flex flex-col z-20">
+<!-- Barrita de arrastre sutil visual -->
+<div class="w-10 h-1 bg-surface-variant rounded-full mx-auto mb-4 self-center opacity-60"></div>
+<!-- Fila de Badges Superiores -->
+<div class="flex flex-wrap items-center gap-space-sm mb-3">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md tracking-wide">
+        HACKATHONES
+      </span>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+        ¡ÚLTIMOS 4 DÍAS!
+      </div>
+</div>
+<!-- Título Principal H1 -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight mb-4">
+      Global AI Hackathon 2026: Generative Intelligence for Impact
+    </h1>
+<!-- Entidad Organizadora -->
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low mb-5">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-md text-title-md font-bold shadow-sm">
+        G
+      </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Google Cloud &amp; Anthropic</span>
+<span class="material-symbols-rounded text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Organizador oficial verificado</span>
+</div>
+</div>
+<!-- Card de Countdown Destacada -->
+<div class="relative overflow-hidden rounded-xl bg-error-container/30 p-4 mb-6 shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-11 h-11 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-rounded text-[24px] animate-pulse">timer</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Cierre de inscripciones</span>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold font-tabular-countdown tracking-tight" id="live-timer">
+            4d 06h 23m 48s
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Fecha límite: Domingo 12 Octubre, 23:59 GMT-5
+          </span>
+</div>
+</div>
+</div>
+<!-- Fila de Especificaciones Clave (3 Columnas) -->
+<div class="grid grid-cols-3 gap-2 p-3 bg-surface-container rounded-xl mb-6 text-center">
+<div class="flex flex-col items-center justify-center p-2">
+<span class="material-symbols-rounded text-primary text-[20px] mb-1">distance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Modalidad</span>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-0.5">100% Remoto</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-rounded text-tertiary text-[20px] mb-1">payments</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Costo</span>
+<span class="font-label-md text-label-md text-tertiary font-bold mt-0.5">Gratis / Free</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2">
+<span class="material-symbols-rounded text-secondary text-[20px] mb-1">group</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Equipo</span>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-0.5">1 a 4 pers.</span>
+</div>
+</div>
+<!-- Secciones Estructuradas con Acordeón Interactivo -->
+<div class="flex flex-col gap-3">
+<!-- 1. Descripción del reto -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left" onclick="toggleSection('sec-reto')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-rounded text-primary text-[20px]">psychology</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Descripción del reto</span>
+</div>
+<span class="material-symbols-rounded text-on-surface-variant text-[20px] transition-transform duration-200" id="icon-sec-reto">expand_less</span>
+</button>
+<div class="px-4 pb-4 text-on-surface-variant font-body-md text-body-md" id="sec-reto">
+          Diseña y despliega agentes autónomos o soluciones de razonamiento multimodal que aborden problemáticas críticas de educación, sostenibilidad o salud global. Tendrás acceso irrestricto a los modelos fundacionales más avanzados de Anthropic (Claude 3.7 Sonnet) y Vertex AI de Google Cloud.
+        </div>
+</div>
+<!-- 2. Requisitos de postulación -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left" onclick="toggleSection('sec-reqs')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-rounded text-tertiary text-[20px]">checklist</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Requisitos de postulación</span>
+</div>
+<span class="material-symbols-rounded text-on-surface-variant text-[20px] transition-transform duration-200" id="icon-sec-reqs">expand_less</span>
+</button>
+<div class="px-4 pb-4 flex flex-col gap-2.5" id="sec-reqs">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-rounded text-tertiary-container text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Estudiantes universitarios, graduados o entusiastas tech mayores de 18 años.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-rounded text-tertiary-container text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Repositorio de código abierto (GitHub/GitLab) con commit inicial fechado durante el evento.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-rounded text-tertiary-container text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Video pitch demostrativo (MVP funcional en vivo) no superior a 3 minutos.</span>
+</div>
+</div>
+</div>
+<!-- 3. Premios y Reconocimientos -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left" onclick="toggleSection('sec-premios')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-rounded text-primary-container text-[20px]">emoji_events</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Premios y Reconocimientos</span>
+</div>
+<span class="material-symbols-rounded text-on-surface-variant text-[20px] transition-transform duration-200" id="icon-sec-premios">expand_less</span>
+</button>
+<div class="px-4 pb-4" id="sec-premios">
+<div class="p-3 bg-secondary-fixed/50 rounded-xl mb-3 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant uppercase">Bolsa total garantizada</span>
+<p class="font-headline-md text-headline-md text-on-secondary-fixed font-black">$50,000 USD</p>
+</div>
+<span class="material-symbols-rounded text-secondary text-[32px]">stars</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span><strong>1er Lugar:</strong> $25,000 USD cash + $10k créditos Cloud Vertex.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span><strong>2do &amp; 3er Lugar:</strong> $15,000 y $10,000 USD respectivamente.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span><strong>Fast-track:</strong> Entrevistas directas de contratación técnica con Anthropic.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- 4. Cómo participar -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left" onclick="toggleSection('sec-pasos')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-rounded text-secondary text-[20px]">route</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Cómo participar</span>
+</div>
+<span class="material-symbols-rounded text-on-surface-variant text-[20px] transition-transform duration-200" id="icon-sec-pasos">expand_less</span>
+</button>
+<div class="px-4 pb-4 flex flex-col gap-3" id="sec-pasos">
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">1</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Registro previo</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Completa el formulario en Devpost oficial antes del cierre dominical.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">2</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Envío de MVP</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sube tu codebase y el video pitch con acceso público para evaluación.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">3</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Demo Day en vivo</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Los 10 mejores equipos presentarán ante jurados de Google y Anthropic.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Barra Inferior Fija de Conversión (Bottom Action Dock) -->
+<div class="fixed bottom-0 inset-x-0 z-50 px-margin pt-3 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)] flex flex-col gap-2">
+<!-- Botón Primario de Alto Impacto (52dp) -->
+<a class="w-full h-[52px] rounded-xl bg-gradient-to-r from-primary to-secondary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform" href="https://devpost.com" rel="noopener noreferrer" target="_blank">
+<span>Postular en sitio oficial</span>
+<span class="material-symbols-rounded text-[18px]">open_in_new</span>
+</a>
+<!-- Botón Secundario Toggle con Recordatorios (44dp) -->
+<button class="w-full h-[44px] rounded-xl bg-tertiary-container/10 text-tertiary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-colors" id="reminder-btn" onclick="toggleReminders()" type="button">
+<span class="material-symbols-rounded text-[18px]" id="reminder-icon" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span id="reminder-label">✓ Te avisaremos 7, 3 y 1 día antes</span>
+</button>
+</div>
+</div>
+<script>
+  // Countdown Interactivo Micro-Clock
+  let secondsRemaining = (4 * 24 * 3600) + (6 * 3600) + (23 * 60) + 48;
+  const timerElement = document.getElementById('live-timer');
+
+  function updateTimerDisplay() {
+    if (secondsRemaining <= 0) {
+      if (timerElement) timerElement.innerText = "¡Convocatoria Cerrada!";
+      return;
+    }
+    const d = Math.floor(secondsRemaining / (24 * 3600));
+    const h = Math.floor((secondsRemaining % (24 * 3600)) / 3600);
+    const m = Math.floor((secondsRemaining % 3600) / 60);
+    const s = Math.floor(secondsRemaining % 60);
+    
+    const formatted = `${d}d ${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+    if (timerElement) timerElement.innerText = formatted;
+    secondsRemaining--;
+  }
+  setInterval(updateTimerDisplay, 1000);
+
+  // Acordeón de Secciones
+  function toggleSection(sectionId) {
+    const el = document.getElementById(sectionId);
+    const icon = document.getElementById('icon-' + sectionId);
+    if (!el || !icon) return;
+    
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      el.classList.add('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  // Toggle Favoritos
+  let isFav = true;
+  function toggleFavorite() {
+    isFav = !isFav;
+    const btn = document.getElementById('fav-btn');
+    const icon = document.getElementById('fav-icon');
+    if (isFav) {
+      btn.className = "w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center text-error active:scale-90 transition-transform";
+      icon.innerText = "favorite";
+      icon.style.fontVariationSettings = "'FILL' 1";
+    } else {
+      btn.className = "w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform";
+      icon.innerText = "favorite_border";
+      icon.style.fontVariationSettings = "'FILL' 0";
+    }
+  }
+
+  // Toggle Notificaciones
+  let remindersActive = true;
+  function toggleReminders() {
+    remindersActive = !remindersActive;
+    const btn = document.getElementById('reminder-btn');
+    const icon = document.getElementById('reminder-icon');
+    const label = document.getElementById('reminder-label');
+    
+    if (remindersActive) {
+      btn.className = "w-full h-[44px] rounded-xl bg-tertiary-container/10 text-tertiary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-colors";
+      icon.innerText = "check_circle";
+      icon.style.fontVariationSettings = "'FILL' 1";
+      label.innerText = "✓ Te avisaremos 7, 3 y 1 día antes";
+    } else {
+      btn.className = "w-full h-[44px] rounded-xl bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-colors";
+      icon.innerText = "notifications_none";
+      icon.style.fontVariationSettings = "'FILL' 0";
+      label.innerText = "Activar recordatorios automáticos";
+    }
+  }
+
+  // Web Share API
+  function handleShare() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Global AI Hackathon 2026',
+        text: '¡Mira este hackathon de IA con $50,000 en premios en Activation!',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      navigator.clipboard?.writeText(window.location.href);
+      alert('¡Enlace de la oportunidad copiado al portapapeles!');
+    }
+  }
+</script></main></body></html>
