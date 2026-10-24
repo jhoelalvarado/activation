@@ -26,14 +26,5 @@ plugins {
     id("org.jetbrains.kotlin.android") version "2.4.0" apply false
 }
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
-    repositories {
-        maven("https://maven.aliyun.com/repository/google")
-        maven("https://maven.aliyun.com/repository/public")
-        google()
-        mavenCentral()
-    }
-}
 
 include(":app")
