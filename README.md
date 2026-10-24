@@ -63,7 +63,17 @@ flutter run                    # desarrollo
 flutter build apk --release    # APK release
 ```
 
-El APK firmado de cada versión está en [Releases](https://github.com/jhoelalvarado/activation/releases).
+## 📲 Descargar la app
+
+APK listo para instalar en Android 7.0+:
+
+**→ [Descargar activation-v1.0.0.apk (Releases)](https://github.com/jhoelalvarado/activation/releases/tag/v1.0.0)**
+
+1. Descarga el APK
+2. Habilita "Instalar apps de fuentes desconocidas"
+3. Instala y activa las notificaciones al finalizar el onboarding
+
+El APK de cada versión se genera automáticamente con GitHub Actions y se publica en [Releases](https://github.com/jhoelalvarado/activation/releases).
 
 ## 🗺️ Roadmap
 
